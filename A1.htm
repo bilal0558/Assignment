@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="" />
+
+	<title>Assignment 1</title>
+    <style>
+    .header{
+        width: 100%;
+        height: 170px;
+        background-color:#007CFF;
+        float:left;
+        color:White;
+        font-size:50px;
+        font-family: monospace;
+    }
+    .menu{
+        width: 100%;
+        height: 30px;
+        background-color:#00366F;
+        float:left;
+        color:White;
+        font-size:20px;
+        font-family: monospace;
+    }
+    .menuitems{
+        width:25%;
+        color:White;
+    }
+    .content{
+        width: 50%;
+        height: 400px;
+        background-color:#C8E3FF;
+        float:left;
+        text-align:center;
+        color:034990;
+        font-size:15px;
+        font-family: monospace;
+    }
+    .footer{
+        width: 100%;
+        height: 100px;
+        background-color:#0554A4;
+        float:left;
+        text-align:center;
+        color:White;
+        font-size:20px;
+        font-family: monospace;
+    }
+    .form{
+        margin-top:10px;
+        font-size:15px;
+    }
+    </style>
+    <script lang=javascript1.5>
+    function f1()
+    {
+        var fee=document.getElementById("course").value;
+        var dur=document.getElementById("dr").value;
+        var tfee=fee*dur;
+        document.getElementById("af").value=fee;
+        document.getElementById("tf").value=tfee;
+    }
+    function f2()
+    {
+        alert("Form Submitted")
+    }
+    </script>
+    
+</head>
+
+<body>
+<div class="header">
+<img src="head.png" width="20%"/>
+</div>
+
+<div class="menu">
+<table width=100%>
+<tr><td>Link 1</td><td>Link 2</td><td>Link 3</td><td>Link 4</td><td>Link 5</td></tr>
+</table>
+</div>
+
+<div class="content">
+<br/><br/><b>Query Form</b>
+<form>
+<div class="form"><select id="course">
+<option value="">Select Course</option>
+<option value="15000" id="bca">Photography</option>
+<option value="10000">Fashion Tech</option>
+<option value="20000">Dance</option>
+<option value="25000">Music</option>
+<option value="22000">Sports</option>
+</select></div>
+<div class="form">Duration:<input type="text" name="dur" id="dr" onblur="f1()"/></div>
+<div class="form">Annual Fees:<input type="text" name="af" id="af" readonly="readonly"/></div>
+<div class="form">Total Fees:<input type="text" name="tf" id="tf" readonly="readonly"/></div>
+</form>
+</div>
+
+<div class="content">
+<br/><br/><b>Contact Form</b>
+<form method="get">
+<div class="form">Name:<input type="text" name="name" placeholder="Enter Name" required="required"/></div>
+<div class="form">Email:<input type="email" name="email" placeholder="Enter Email" required="required"/></div>
+<div class="form">Contact No:<input type="number" name="no" placeholder="Enter Contact No" required="required"/></div>
+<div class="form">Address:<input type="area" name="add" placeholder="Enter Address"/></div>
+<div class="form">Query:</div>
+<div class="form">Qyery 1<input type="checkbox" value="q1" name="q1" /> |
+Query 2<input type="checkbox" name="q2" value="q2" /> |
+Other<input type="checkbox" name="other" value="other" /></div>
+<div class="form"><input type="submit" value="Submit" onclick="f2()"/></div>
+</form>
+</div>
+
+<div class="footer"><br/>Block No, Street Name, City</div>
+
+</body>
+</html>
